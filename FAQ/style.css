@@ -1,0 +1,29 @@
+body {
+
+    background-color: rgb(85, 85, 85);
+    padding: 40px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    line-height: 1.6rem;
+}
+
+.head{
+    background-color: #caf7b4;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+
+   
+}
+
+.para {
+    text-shadow: 3px 3px rgb(255, 204, 221);
+   font-size:  25px;
+  }
+
+
+.faq
+{
+text-decoration-color:white;
+
+}
+  

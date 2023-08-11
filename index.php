@@ -17,23 +17,33 @@
             <h1 class="font-weight-bolder text-white" style="font-family: 'Reggae One', cursive;">Online Controlling
                 System for Social Harassment</h1>
         </div>
-        <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:aliceblue;">
+        <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:lightblue;">
             <div class="collapse navbar-collapse container" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active" >
+                    <li class="nav-item active">
                         <a class="nav-link text-white" href="#">Home</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link text-white" href="../ProjectReport/HelplineMaster/helplineReport.php">Helpline Details</a>
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="./HelplineMaster/helplineReport.php">Helpline Details</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link text-white" href="./Complaint/complaintForm.php">Complaint</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="./Login/login.php">Login</a>
-                    </li>
+                        <?php
+                        session_start();
+                        if (!$_SESSION)
+                            echo '<a class="nav-link text-white" href="./Login/login.php">logIn</a>';
+                        else {
+                            echo '<a class="nav-link text-white" href="./LogOut/logout.php">logOut</a>';
+                        }
+                        ?>
                 </ul>
             </div>
+            <?php
+            if ($_SESSION)
+                echo "Hello, Welcome " . $_SESSION['name'];
+            ?>
         </nav>
     </header>
     <section>
@@ -85,7 +95,7 @@ Harassment3" height="750px">
                             <ul>
                                 <li>
                                     <a href="#">
-                                    <i class="fa fa-facebook">f</i>
+                                        <i class="fa fa-facebook">f</i>
                                     </a>
                                 </li>
                                 <li>
@@ -149,10 +159,10 @@ Harassment3" height="750px">
                                         <a href="#">About us</a>
                                     </li>
                                     <li>
-                                        <a href="#">Hospital Details</a>
+                                        <a href="./HelplineMaster/helplineReport.php">Hospital Details</a>
                                     </li>
                                     <li>
-                                        <a href="#">FAQ</a>
+                                        <a href="./FAQ/faq.html">FAQ</a>
                                     </li>
                                 </ul>
                                 <ul>

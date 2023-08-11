@@ -1,0 +1,16 @@
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+
+
+/* ####################################### MODIFY ########################### */
+
+.modify-form {
+    border-radius: 30px;
+    box-shadow: 5px 10px#db62a3;
+    width: 550px;
+    background: linear-gradient(#E1A2B8, #9F2BC1);
+}

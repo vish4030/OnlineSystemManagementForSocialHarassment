@@ -11,16 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image: url('../img/admin.jpg'); background-size: cover;">
     <header>
-        <div class="text-center py-4" style="background: linear-gradient(lightblue, aliceblue);">
-            <h1 class="font-weight-bolder text-white" style="font-family: 'Reggae One', cursive;">Online Controlling
-                System for Social Harassment</h1>
-        </div>
         <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:blue;">
             <div class="collapse navbar-collapse container" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active" >
+                    <li class="nav-item active">
                         <a class="nav-link text-white" href="#">Admin</a>
                     </li>
                     <li class="nav-item active">
@@ -32,9 +28,22 @@
                     <li class="nav-item active">
                         <a class="nav-link text-white" href="./HelplineMaster/modify.php">Helpline </a>
                     </li>
+                    <li class="nav-item active">
+                        <?php
+                        session_start();
+                        if ($_SESSION)
+                            echo  '<a class="nav-link text-white" href="../LogOut/logout.php">LogOut </a>';
+                        ?>
+                        
+                    </li>
                 </ul>
             </div>
+            <?php
+            if ($_SESSION)
+                echo  "Hello, Welcome " . $_SESSION['name'];
+            ?>
         </nav>
     </header>
 </body>
+
 </html>

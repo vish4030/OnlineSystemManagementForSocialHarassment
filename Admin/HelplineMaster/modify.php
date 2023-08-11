@@ -39,7 +39,7 @@ if (isset($_POST['Delete1'])) {
 
 //*************************Search******************//
 if (isset($_POST['srchval'])) {
-    $query2 = "SELECT * FROM HelplineMaster WHERE Mobile = '$sch'";
+    $query2 = "SELECT * FROM HelplineMaster WHERE HelplineType = '$sch'";
     $result = mysqli_query($conn, $query2);
     while ($row1 = mysqli_fetch_array($result)) {
         $TxtHelplineType1 = $row1['HelplineType'];
@@ -80,7 +80,7 @@ HelplineType='$TxtHelplineType', Whatsapp='$Txtwhatsapp',Address='$TxtAddress', 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victim Master || Online Controlling System for Social Harassment</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../style_help.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
@@ -112,31 +112,31 @@ HelplineType='$TxtHelplineType', Whatsapp='$Txtwhatsapp',Address='$TxtAddress', 
     </script>
 </head>
 
-<body oncontextmenu="return false" onload="inputboxvalue()">
-<nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:blue;">
+<body oncontextmenu="return false" onload="inputboxvalue()" style="background-image: url('../../img/help.jpg'); background-size: cover;">
+    <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:blue;">
         <div class="collapse navbar-collapse container" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="../admin.php">Admin Home</a>
+                    <a class="nav-link text-white" href="../admin.php">Admin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="./helplineReport.php">Victim Details</a>
+                    <a class="nav-link text-white" href="./helplineReport.php">HelpLineDetails</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <section class="my-5 py-5">
+    <section class="my-5 py-5 container">
         <form name="form1" method="post" action="">
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
                         <select name="srchval" id="fn" class="custom-select">
-                            <option>Select Email Address</option>
+                            <option>Select HelpLine Type</option>
                             <?php
-                            $res = mysqli_query($conn, "SELECT Mobile FROM HelplineMaster");
+                            $res = mysqli_query($conn, "SELECT HelplineType FROM helplinemaster");
                             while ($row = mysqli_fetch_array($res)) {
                             ?>
-                                <option><?php echo $row["Mobile"]; ?></option>
+                                <option><?php echo $row["HelplineType"] ?></option>
                             <?php
                             }
                             ?>
@@ -145,11 +145,8 @@ HelplineType='$TxtHelplineType', Whatsapp='$Txtwhatsapp',Address='$TxtAddress', 
                     </div>
                 </div>
             </div>
-
-            <div class="card mx-auto p-4 font-weight-bold" style="border-radius: 30px; box-shadow: 5px 10px
-#d20172; width: 550px; opacity: 0.90; background: linear-gradient(#E1A2B8, #9F2BC1);">
-                <h1 class="font-weight-bold text-center mb-4" style="color: #4c1800; font-family: 'Reggae One',
-cursive;">Victim Master</h1>
+            <div class="card mx-auto p-4 font-weight-bold modify-form">
+                <h1 class="font-weight-bold text-center mb-4" style="color: #4c1800;">Victim Master</h1>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -231,8 +228,10 @@ cursive;">Victim Master</h1>
                             </div>
                         </div>
                     </div>
+                </div>
         </form>
     </section>
+    </div>
 </body>
 
 </html>

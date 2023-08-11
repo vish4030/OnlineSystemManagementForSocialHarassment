@@ -9,16 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
-    <script>
-        function abc() {
-            window.print();
-        }
-    </script>
+    <link rel="stylesheet" href="./style_help.css">
 </head>
 
-<body style="background-image: url('images/bg4.jpg'); background-size: cover;">
+<body style="background-image: url('../img/bg_sky.jpg'); background-size: cover;">
 
-    <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:aliceblue;">
+    <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:#538FFB;">
         <div class="collapse navbar-collapse container" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -36,6 +32,7 @@
     $query = "SELECT * FROM `HelplineMaster`";
     $result = mysqli_query($conn, $query);
     ?>
+    <div class="container">
     <section class="my-5 py-5" >
         <div class="card mx-auto p-4 font-weight-bold" style="border-radius: 30px; box-shadow: 5px 10px
 #713800; opacity: 0.90; background: #1B98F5;">
@@ -45,7 +42,6 @@ cursive;">Report Helpline</h1>
                 <table class="table table-bordered">
                     <thead class="" style="background: #120E43; color: white;">
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Helpline Type</th>
                             <th scope="col">Helpline Mobile</th>
                             <th scope="col">Helpline Whatsapp</th>
@@ -61,7 +57,6 @@ cursive;">Report Helpline</h1>
                         while ($row = mysqli_fetch_array($result)) {
                         ?>
                             <tr>
-                                <th scope="row"><?php echo $row["Helpline_ID"]; ?></th>
                                 <td><?php echo $row["HelplineType"]; ?></td>
                                 <td><?php echo $row["Mobile"]; ?></td>
                                 <td><?php echo $row["whatsapp"]; ?></td>
@@ -77,10 +72,9 @@ cursive;">Report Helpline</h1>
                     </tbody>
                 </table>
             </div>
-            <button class="btn badge-pill" type="button" onclick="abc()" style="font-size:25px; border:0px;
-background: #120E43; color: white; font-family: 'Reggae One', cursive;">Print</button>
         </div>
     </section>
+    </div>
 </body>
 
 </html>

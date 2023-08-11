@@ -1,0 +1,32 @@
+body {
+    background-image: url('../img/login.jpg');
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 100px auto;
+}
+
+.login {
+    display: flex;
+}
+
+.greeting {
+    color: white;
+    margin: auto 20px;
+}
+
+.form-div {
+    border-radius: 30px;
+    box-shadow: 5px 10px#d20172;
+    width: 550px;
+    background: linear-gradient(#E1A2B8, #9F2BC1);
+}
+.form-div a{
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    background:rgb(11, 171, 224);
+    margin: 10px auto 0 auto;
+}

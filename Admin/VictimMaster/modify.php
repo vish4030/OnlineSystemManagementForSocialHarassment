@@ -86,8 +86,7 @@ FullName='$TxtFullName',FatherName='$TxtFatherName', Age='$TxtAge',Gender='$Gend
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victim Master || Online Controlling System for Social Harassment</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../style_help.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
@@ -133,7 +132,7 @@ FullName='$TxtFullName',FatherName='$TxtFatherName', Age='$TxtAge',Gender='$Gend
     </script>
 </head>
 
-<body oncontextmenu="return false" onload="inputboxvalue()">
+<body oncontextmenu="return false" onload="inputboxvalue()" style="background-image: url('../../img/victim.webp'); background-size: cover;">
     <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:blue;">
         <div class="collapse navbar-collapse container" id="navbarNav">
             <ul class="navbar-nav">
@@ -146,7 +145,7 @@ FullName='$TxtFullName',FatherName='$TxtFatherName', Age='$TxtAge',Gender='$Gend
             </ul>
         </div>
     </nav>
-    <section class="my-5 py-5">
+    <section class="my-5 py-5 container">
         <form name="form1" method="post" action="">
             <div class="row">
                 <div class="col-md-3">
@@ -167,8 +166,7 @@ FullName='$TxtFullName',FatherName='$TxtFatherName', Age='$TxtAge',Gender='$Gend
                 </div>
             </div>
 
-            <div class="card mx-auto p-4 font-weight-bold" style="border-radius: 30px; box-shadow: 5px 10px
-#d20172; width: 550px; opacity: 0.90; background: linear-gradient(#E1A2B8, #9F2BC1);">
+            <div class="card mx-auto p-4 font-weight-bold modify-form">
                 <h1 class="font-weight-bold text-center mb-4" style="color: #4c1800; font-family: 'Reggae One',
 cursive;">Victim Master</h1>
                 <div class="row">

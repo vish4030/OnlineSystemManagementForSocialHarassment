@@ -21,7 +21,7 @@ if (isset($_POST['register'])) {
     mysqli_query($conn, "INSERT INTO VictimMaster(FullName, FatherName,Age,Gender,Mobile,Email,Address,State,Country,Pincode,City) VALUES
     ('$TxtFullName','$TxtFatherName','$TxtAge','$Gender','$TxtMobile','$TxtEmail','$TxtAddress','$TxtState','$TxtCountry','$TxtPincode',$TxtCity)");
 
-    mysqli_query($conn,"INSERT INTO user(Email, Passwords,UserType)Values('$TxtEmail','$TxtPassword','$TxtUser')");
+    mysqli_query($conn, "INSERT INTO user(Email, Passwords,UserType)Values('$TxtEmail','$TxtPassword','$TxtUser')");
 
     if (mysqli_affected_rows($conn) > 0) {
         echo "<p>Data Added</p>";
@@ -52,17 +52,19 @@ if (isset($_POST['register'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victim Master || Online Controlling System for Social Harassment</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style_signup.css">
 </head>
 
 <body oncontextmenu="return false">
-<nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:aliceblue;">
+
+    <nav class="navbar navbar-expand-lg font-weight-bold" style="background-color:#538FFB;">
         <div class="collapse navbar-collapse container" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="../Login/login.php">Home</a>
+                    <a class="nav-link text-white" href="../Login/login.php">LOGIN</a>
                 </li>
             </ul>
         </div>
@@ -174,19 +176,19 @@ if (isset($_POST['register'])) {
                             <input type="text" name="TxtPincode" class="form-control" " />
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Password <span style="color:#ff0000">*</span></label>
-                            <input type="text" name="TxtPassword" class="form-control" " />
+                    <div class=" col-md-6">
+                            <div class="form-group">
+                                <label>Password <span style="color:#ff0000">*</span></label>
+                                <input type="text" name="TxtPassword" class="form-control" " />
                         </div>
                     </div>
                 </div>
                 <div class=" row ">
                 <div class=" form-group">
-                            <input type="submit" class="btn btn-primary" name="register" id="rg" value="Register" />
+                                <input type="submit" class="btn btn-primary" name="register" id="rg" value="Register" />
+                            </div>
                         </div>
                     </div>
-                </div>
         </form>
     </section>
 </body>
